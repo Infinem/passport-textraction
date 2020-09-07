@@ -12,7 +12,7 @@ LicenseCode = 'B92F6B02-4FBA-464C-895A-07F88963BD8A'
 UserName =  'sunedition'
 RequestUrl = "http://www.ocrwebservice.com/restservices/processDocument?gettext=true"
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def find_rectangle(image):
     rectangle_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (10, 5))
