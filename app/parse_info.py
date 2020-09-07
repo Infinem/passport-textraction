@@ -29,6 +29,8 @@ def clear_first_row(first_row):
 def clear_second_row(second_row):
     second_row = second_row.upper()
     second_row = second_row.replace(' ', '')
+    second_row = [string for string in second_row if string not in ['.', ',']]
+    second_row = ''.join(second_row)
     idx_list = [10, 11, 12]
     if len(second_row) != 44:
         for i in range(len(second_row)):
@@ -152,6 +154,7 @@ def add_validated(text):
         return json_object
 
 def parse(text):
+    text = 'p<UZBTALIPOV<<AKRAM<<<<,,,,,,,<<<<<<<. AA85901591UZB6502207M25,020253200265026003962'
     if '\n' in text:
         rows = text.split('\n')
     else:
