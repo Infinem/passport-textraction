@@ -89,6 +89,7 @@ def detect_read(image):
     response = requests.post(RequestUrl, data=open('./roi.jpg', 'rb'), auth=(UserName, LicenseCode))
     jobj = json.loads(response.content)
     text = jobj["OCRText"][0][0]
+    print(text)
     # text = pytesseract.image_to_string(digits_dict[max(list(digits_dict.keys()))])
     try:
         json_object = parse(text)
