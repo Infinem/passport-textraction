@@ -154,7 +154,6 @@ def add_validated(text):
         return json_object
 
 def parse(text):
-    text = 'p<UZBTALIPOV<<AKRAM<<<<,,,,,,,<<<<<<<. AA85901591UZB6502207M25,020253200265026003962'
     if '\n' in text:
         rows = text.split('\n')
     else:
